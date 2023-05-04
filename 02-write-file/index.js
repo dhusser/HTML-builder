@@ -11,7 +11,7 @@ io.on('SIGINT', () => {
   console.log('\nGood Luck!\n');
   io.close();
   return;
-})
+});
 
 fs.writeFile(file, '', (err) => {
   if (err) throw err;
@@ -24,7 +24,7 @@ function startPrompt() {
       console.log('\nGood Luck!\n');
       io.close();
       return;
-    }
+    };
 
     fs.appendFile(file, answer + '\n', (err) => {
       if (err) throw err;
@@ -33,4 +33,4 @@ function startPrompt() {
     });
 
   });
-}
+};
